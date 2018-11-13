@@ -1,0 +1,22 @@
+    <h1><%= current_user.firstname %> <%= current_user.lastname %></h1>
+    <p id="notice"><%= notice %></p>
+    <h2>My bookings</h2>
+
+
+    <table>
+      <thead>
+        <tr>
+          <td><strong>date</strong></td>
+          <td><strong>status</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bookings.each do |booking| %>
+        <tr>
+          <td><strong><%= booking.date %></strong></td>
+          <td><%= booking.status %></td>
+        </tr>
+      </tbody>
+    </table>
+        <% end %>
+
