@@ -1,0 +1,17 @@
+
+
+<div class="container">
+  <div class="row">
+
+    <% @hairstylists.each do |hairstylist| %>
+
+      <div class="col-xs-12 col-sm-4">
+      <h2><%= hairstylist.first_name %></h2>
+      <p><%= hairstylist.services %></p>
+        <!-- insert <div class="card"> -->
+      </div>
+    <% end %>
+
+
+  </div>
+</div>
