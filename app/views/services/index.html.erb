@@ -1,0 +1,6 @@
+
+<h1>Services offered by this hairstylist</h1>
+<%  @hairstylist.services.each do |service| %>
+  <h2><%= @hairstylist.first_name%></h2>
+  <h3> <%= link_to(service.name, service_path(service)) %></h3>
+<% end %>
