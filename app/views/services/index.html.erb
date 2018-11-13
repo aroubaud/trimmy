@@ -1,0 +1,30 @@
+<h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+<h2>My services</h2>
+<p id="notice"><%= notice %></p>
+
+  <% @services.each do |service| %>
+    <table>
+      <thead>
+        <tr>
+          <td><strong>name</strong></td>
+          <td><strong>description</strong></td>
+          <td><strong>price/CAD</strong></td>
+          <td><strong>Edit</strong></td>
+          <td><strong>Destroy</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong><%= service.name %></strong></td>
+          <td><%= service.description %></td>
+          <td><strong><%= service.price %></strong></td>
+          <td><%= link_to 'edit', edit_service_path(service) %></td>
+          <td><%= link_to 'destroy', service_path(service), method: :delete %></td>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
+<%= link_to 'Add a service', new_service_path %>
+  <h1>My bookings</h1>
+
+
