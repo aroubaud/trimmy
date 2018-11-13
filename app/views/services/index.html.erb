@@ -2,11 +2,10 @@
 <h2>My services</h2>
 <p id="notice"><%= notice %></p>
 
-  <% @services.each do |service| %>
+
     <table>
       <thead>
-        <tr>
-          <td><strong>name</strong></td>
+         <td><strong>name</strong></td>
           <td><strong>description</strong></td>
           <td><strong>price/CAD</strong></td>
           <td><strong>Edit</strong></td>
@@ -14,6 +13,7 @@
         </tr>
       </thead>
       <tbody>
+        <% @services.each do |service| %>
         <tr>
           <td><strong><%= service.name %></strong></td>
           <td><%= service.description %></td>
@@ -21,9 +21,10 @@
           <td><%= link_to 'edit', edit_service_path(service) %></td>
           <td><%= link_to 'destroy', service_path(service), method: :delete %></td>
         </tr>
+        <% end %>
       </tbody>
     </table>
-  <% end %>
+
 <%= link_to 'Add a service', new_service_path %>
   <h1>My bookings</h1>
 
