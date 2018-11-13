@@ -7,9 +7,15 @@
 
       <div class="col-xs-12 col-sm-4">
       <h2><%= hairstylist.first_name %></h2>
-      <p><%= hairstylist.services %></p>
+
         <!-- insert <div class="card"> -->
       </div>
+      <ul>
+        <% hairstylist.services.each do |service| %>
+          <li> <%= service.name %></li>
+        <% end %>
+
+      </ul>
     <% end %>
 
 
