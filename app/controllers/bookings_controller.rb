@@ -14,6 +14,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(status: 'pending')
     @booking.service = @service
     @booking.user = current_user
+    @booking.save
     redirect_to bookings_path
   end
 
