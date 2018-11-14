@@ -7,11 +7,9 @@ class BookingsController < ApplicationController
   end
 
   def new
-
   end
 
   def create
-
     @service = Service.find(params[:service_id])
     @booking = Booking.new(status: 'pending')
     @booking.service = @service
