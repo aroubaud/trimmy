@@ -1,0 +1,11 @@
+<h1>your services!</h1>
+<p id="notice"><%= notice %></p>
+  <% @services.each do |service| %>
+    <table>
+      <tr>
+        <td><%= service.name %></td>
+        <td><%= service.description %></td>
+        <td><%= service.price %></td>
+      </tr>
+    </table>
+  <% end %>
