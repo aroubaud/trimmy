@@ -6,7 +6,8 @@
     <% @hairstylists.each do |hairstylist| %>
 
       <div class="col-xs-12 col-sm-4">
-      <h2><%= hairstylist.first_name %></h2>
+      <h2>
+        <%= link_to(hairstylist.first_name, hairstylist_path(hairstylist)) %></h2>
 
         <!-- insert <div class="card"> -->
       </div>
