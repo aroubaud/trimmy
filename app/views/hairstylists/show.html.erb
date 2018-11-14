@@ -1,0 +1,8 @@
+<h1> <%= @hairstylist.first_name %> <%= @hairstylist.last_name %></h1>
+
+<% @hairstylist.services.each do |service| %>
+  <h2><%= service.name %></h2>
+  <h3><%= service.description %></h2>
+  <h4><%= service.price %></h3>
+  <%= link_to "Book now", service_bookings_path(service), method: :post %>
+<% end %>
