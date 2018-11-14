@@ -9,5 +9,8 @@ class BookingsController < ApplicationController
   end
 
   def create
+    # TODO:
+    #   Create a booking for the service
+    # redirect_to bookings_path
   end
 end
