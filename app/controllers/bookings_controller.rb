@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def index
+    @bookings = Booking.all
   end
 
   def show
@@ -9,8 +10,16 @@ class BookingsController < ApplicationController
   end
 
   def create
-    # TODO:
-    #   Create a booking for the service
-    # redirect_to bookings_path
+    @service = Service.find(params[:service_id])
+    @booking = Booking.new(status: 'pending')
+    @booking.service = @service
+    @booking.user = current_user
+    redirect_to bookings_path
   end
+
+  # private
+
+  # def booking_params
+  #   params.require(:booking).permit(:date, :status, :service_id)
+  # end
 end
