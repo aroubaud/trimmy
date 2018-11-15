@@ -25,6 +25,9 @@
 /* Logo */
 .navbar-trimmy-brand img {
   height: 60px;
+  color: #616668;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 /* Right section */
@@ -57,4 +60,10 @@
 .navbar-trimmy-link-color:hover {
   color: black;
   text-decoration: none;
+}
+
+.navbar-trimmy-logo-text {
+  color: white;
+  font-size: 36px;
+
 }
