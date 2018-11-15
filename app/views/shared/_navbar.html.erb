@@ -1,14 +1,15 @@
 <% if action_name == 'home' %>
   <div class="navbar-trimmy">
     <!-- Logo -->
-    <%= link_to root_path, class: "navbar-trimmy-brand" do %>
+    <%= link_to root_path, class: "navbar-trimmy-brand", id: "logo-text" do %>
       <%= image_tag 'trimmy_logo.png', alt: '', height: 50 %>
+      Trimmy
     <% end %>
 
     <!-- Right Navigation -->
     <div class="navbar-trimmy-right">
 
-      <% if user_signed_in? %>
+      <% if user_signed_in?%>
 
         <!-- Links when logged in -->
         <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
@@ -25,23 +26,24 @@
 <% else %>
    <div class="navbar-trimmy-color">
     <!-- Logo -->
-    <%= link_to root_path, class: "navbar-trimmy-brand" do %>
+    <%= link_to root_path, class: "navbar-trimmy-brand navbar-trimmy-link-color" do %>
       <%= image_tag "trimmy_logo.png", height: 50 %>
+      Trimmy
     <% end %>
 
     <!-- Right Navigation -->
     <div class="navbar-trimmy-right">
 
-      <% if user_signed_in? %>
-
+      <% if user_signed_in? && current_user.hairstylist = true %>
+        <%= link_to "My bookings", services_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
         <!-- Links when logged in -->
-        <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
+
         <%= link_to destroy_user_session_path, method: :delete, class: "navbar-trimmy-item navbar-trimmy-link-color" do %>
         Log out
         <% end %>
       <% else %>
         <!-- Login link (when logged out) -->
-        <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+        <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
         <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
       <% end %>
     </div>

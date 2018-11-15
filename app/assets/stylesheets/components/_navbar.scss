@@ -27,6 +27,14 @@
   height: 60px;
 }
 
+#logo-text {
+  font-family: "Saira";
+  font-size: 30px;
+  font-weight: medium;
+  color: white;
+  text-decoration: none;
+}
+
 /* Right section */
 .navbar-trimmy-right {
   display: flex;
@@ -46,7 +54,7 @@
   font-size: 16px;
 }
 .navbar-trimmy-link:hover {
-  color: #616668;
+  color: #1d2323;
   text-decoration: none;
 }
 
@@ -57,4 +65,10 @@
 .navbar-trimmy-link-color:hover {
   color: black;
   text-decoration: none;
+}
+
+.navbar-trimmy-logo-text {
+  color: white;
+  font-size: 36px;
+
 }

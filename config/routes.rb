@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "hairstylists", to: "hairstylists#index", as: :hairstylists
   get "hairstylists/:id", to: "hairstylists#show", as: :hairstylist
 
-  resources :bookings, only: :index
+  resources :bookings, only: [:index,:update]
 
   resources :services do
     resources :bookings, only: [:create]

@@ -1,6 +1,7 @@
 class ServicesController < ApplicationController
   def index
     @services = Service.all
+    @bookings = current_user.booking_requests
   end
 
   def show
