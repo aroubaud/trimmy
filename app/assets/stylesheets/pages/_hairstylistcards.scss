@@ -15,15 +15,15 @@
   border-radius: 50%;
 }
 .card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  // position: relative;
+  // top: 10px;
+  // left: 10px;
   font-size: 15px;
   text-transform: uppercase;
 }
 .card-description {
-  position: absolute;
-  bottom: 10px;
+  // position: relative;
+  // bottom: 10px;
   left: 10px;
 }
 .card-description h2 {
@@ -45,5 +45,18 @@
   opacity: 0;
 }
 .card-link:hover {
-  opacity: 0.1;
+  opacity: 0.6;
 }
+
+.card{
+  margin-top: 30px;
+  top: 20px;
+}
+
+li{
+  list-style-type: none;
+}
+
+
+
+

@@ -15,31 +15,8 @@
 <div class="container">
   <div class="row">
     <% @hairstylists.each do |hairstylist| %>
-
-      <div class= "card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1527512950678-b88a241e9f4b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=468789e920b7440447df653edade6df4&auto=format&fit=crop&w=750&q=80');">
-        <div class="card-category">Hairstylist</div>
-  <div class="card-description">
-    <h2> Reserve your spot with me</h2>
-    <p> i'm a nice & fast barber</p>
-  </div>
-
-     <img class="card-user" src="https://cdn2.vectorstock.com/i/thumb-large/82/41/bearded-men-face-hipster-character-vector-14648241.jpg">
-  <a class="card-link" href="#" ></a>
-</div>
-
-      <h2>
-        <%= link_to(hairstylist.first_name, hairstylist_path(hairstylist)) %></h2>
-
-        <!-- insert <div class="card"> -->
-      </div>
-      <ul>
-        <% hairstylist.services.each do |service| %>
-          <li> <%= service.name %></li>
-        <% end %>
-
-      </ul>
+      <%= render "components/hairstylist_card", hairstylist: hairstylist %>
     <% end %>
-
-
   </div>
+</div>
 </div>
