@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:email, :password])
   end
+
+  def after_sign_in_path_for(_resource_or_scope)
+    if current_user.hairstylist
+      services_path
+    else
+      hairstylists_path
+    end
+  end
 end
