@@ -8,4 +8,14 @@ class User < ApplicationRecord
   has_many :services
   validates :first_name, presence: true
   validates :last_name, presence: true
+
+  include PgSearch
+  pg_search_scope :global_search,
+    against: [ :first_name, :last_name ],
+    associated_against: {
+      services: [ :name, :description ]
+    },
+    using: {
+      tsearch: { prefix: true }
+    }
 end
