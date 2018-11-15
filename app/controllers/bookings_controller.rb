@@ -25,6 +25,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.save
     redirect_to bookings_path
+
+    #
   end
 
   private
