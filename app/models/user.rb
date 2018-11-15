@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :bookings, dependent: :destroy
   has_many :services
+  has_many :booking_requests, through: :services, source: :bookings
   validates :first_name, presence: true
   validates :last_name, presence: true
 end

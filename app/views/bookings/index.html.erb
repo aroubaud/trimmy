@@ -3,3 +3,4 @@
 <% current_user.bookings.each do |booking| %>
   <p><%= booking.service.name %> <%= booking.service.price %>$ <%= booking.status %></p>
 <% end %>
+

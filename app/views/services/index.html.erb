@@ -27,3 +27,13 @@
 
 <%= link_to 'Add a service', new_service_path %>
   <h1>My bookings</h1>
+<% @bookings.each do |booking| %>
+<p>
+  <strong><%= booking.user.first_name %></strong>
+  <%= booking.date%>
+  <%= booking.status%>
+  <%= link_to 'Accept', booking_path(booking, status: "accepted"), method: :patch %>
+  <%= link_to 'Decline', booking_path(booking, status: "declined"), method: :patch %>
+</p>
+<% end %>
+
