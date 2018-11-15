@@ -17,6 +17,7 @@
         <% end %>
       <% else %>
         <!-- Login link (when logged out) -->
+        <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
         <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
       <% end %>
     </div>
@@ -40,6 +41,7 @@
         <% end %>
       <% else %>
         <!-- Login link (when logged out) -->
+        <%= link_to t(".sign_up", default: "Signup"), new_user_registration_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
         <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
       <% end %>
     </div>
