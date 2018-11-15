@@ -1,7 +1,7 @@
 <% if action_name == 'home' %>
   <div class="navbar-trimmy">
     <!-- Logo -->
-    <%= link_to root_path, class: "navbar-trimmy-brand navbar-trimmy-link" do %>
+    <%= link_to root_path, class: "navbar-trimmy-brand", id: "logo-text" do %>
       <%= image_tag 'trimmy_logo.png', alt: '', height: 50 %>
       Trimmy
     <% end %>

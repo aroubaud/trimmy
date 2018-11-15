@@ -25,8 +25,13 @@
 /* Logo */
 .navbar-trimmy-brand img {
   height: 60px;
-  color: #616668;
-  font-size: 16px;
+}
+
+#logo-text {
+  font-family: "Saira";
+  font-size: 30px;
+  font-weight: medium;
+  color: white;
   text-decoration: none;
 }
 
@@ -49,7 +54,7 @@
   font-size: 16px;
 }
 .navbar-trimmy-link:hover {
-  color: #616668;
+  color: #1d2323;
   text-decoration: none;
 }
 
