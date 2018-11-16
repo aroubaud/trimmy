@@ -2,6 +2,7 @@ Booking.destroy_all
 Service.destroy_all
 User.destroy_all
 
+puts "Creating users..."
 user_attributes = [
   {
     first_name: 'Alex',
@@ -32,7 +33,9 @@ user_attributes = [
     hairstylist: true
   }
 ]
+puts "Users created!"
 
+puts "Creating services..."
 service_attributes = [
   {
     name: 'Trim',
@@ -50,7 +53,9 @@ service_attributes = [
     price: 80
   }
 ]
+puts "Services created!"
 
+puts "Creating bookings..."
 booking_attributes = [
   {
     date: DateTime.new(2018,12,1,17),
@@ -65,6 +70,7 @@ booking_attributes = [
     status: 'Pending'
   }
 ]
+puts "Bookings created!"
 
 user_attributes.each do |attrs|
   user = User.create!(attrs)

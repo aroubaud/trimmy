@@ -10,7 +10,7 @@
           <p><%= service.description %></p>
           <h3><%= service.price %>$</h3>
           <div class="button">
-            <%= link_to "Book now", service_bookings_path(service), method: :post, class: "btn-yours" %>
+            <%= link_to "Book now", new_service_booking_path(service), class: "btn-yours" %>
           </div>
         </div>
       <% end %>
