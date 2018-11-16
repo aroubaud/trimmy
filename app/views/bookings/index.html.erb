@@ -1,30 +1,22 @@
-<div class="wrapperbooking">
-  <div class="bookings-content">
-    <div class="bookingtext">
-      <h1>My bookings</h1>
-      <table>
-        <thead>
-          <tr>
-            <td><strong>Name</strong></td>
-            <td><strong>Price</strong></td>
-            <td><strong>Date</strong></td>
-            <td><strong>Status</strong></td>
-          </tr>
-        </thead>
-
-      <% current_user.bookings.each do |booking| %>
-        <tbody>
-          <tr>
-            <td><%= booking.service.name %></td>
-            <td><%= booking.service.price %>$</td>
-            <td><%= booking.date %></td>
-            <td><%= booking.status %></td>
-          </tr>
-        </tbody>
-      </table>
-      <% end %>
+<div class="booking-content">
+  <div class="container">
+    <h1>My bookings</h1>
+    <% current_user.bookings.each do |booking| %>
+    <div class="booking">
+      <div class="booking-name">
+        <strong><%= booking.service.name %></strong>
+      </div>
+      <div class="booking-price">
+        <%= booking.service.price %>$
+      </div>
+      <div class="booking-date">
+        <%= booking.date %>
+      </div>
+      <div class="booking-status">
+        <%= booking.status %>
+      </div>
     </div>
-
+    <% end %>
   </div>
 </div>
 
