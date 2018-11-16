@@ -1,4 +1,6 @@
+<div class="text-center">
 <%= simple_form_for([ service, booking]) do |f| %>
   <%= f.input(:date, { as: :datetime, html5: true }) %>
   <%= f.submit class: "btn-yours" %>
 <% end %>
+</div>
