@@ -26,12 +26,33 @@ user_attributes = [
     hairstylist: false
   },
   {
-    first_name: 'Vlad',
-    last_name: 'Rango',
+    first_name: 'Vladi',
+    last_name: 'Slavi',
     email: 'vlad@email.com',
     password: '123456',
     hairstylist: true
   }
+  {
+    first_name: 'John',
+    last_name: 'Smith',
+    email: 'john@email.com',
+    password: '123456',
+    hairstylist: true
+  },
+  {
+    first_name: 'Charly',
+    last_name: 'Chaplin',
+    email: 'Charly@email.com',
+    password: '123456',
+    hairstylist: true
+  },
+  {
+    first_name: 'Guillaume',
+    last_name: 'Johnson',
+    email: 'Guillaume@email.com',
+    password: '123456',
+    hairstylist: true
+  },
 ]
 puts "Users created!"
 
@@ -43,15 +64,16 @@ service_attributes = [
     price: 20
   },
   {
-    name: 'Shampoo and haircut',
+    name: 'Shampoo',
     description: 'Shampoo and conditioner wash for any type of hair followed by an awesome haircut',
-    price: 50
+    price: 40
   },
   {
     name: 'Coloring',
     description: 'I have a wide variety of colors. You will be able to pick and I will color your hair right at home!',
     price: 120
   }
+
 ]
 puts "Services created!"
 
