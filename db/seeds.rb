@@ -31,7 +31,7 @@ user_attributes = [
     email: 'vlad@email.com',
     password: '123456',
     hairstylist: true
-  }
+  },
   {
     first_name: 'John',
     last_name: 'Smith',
@@ -52,7 +52,7 @@ user_attributes = [
     email: 'Guillaume@email.com',
     password: '123456',
     hairstylist: true
-  },
+  }
 ]
 puts "Users created!"
 
@@ -73,7 +73,6 @@ service_attributes = [
     description: 'I have a wide variety of colors. You will be able to pick and I will color your hair right at home!',
     price: 120
   }
-
 ]
 puts "Services created!"
 
