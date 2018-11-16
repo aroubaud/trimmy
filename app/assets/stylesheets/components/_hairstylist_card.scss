@@ -1,0 +1,54 @@
+.card {
+  margin: 30px 0px;
+  color: white;
+  height: 175px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  background-position: center;
+  position: relative;
+  top: 20px;
+}
+
+.card-name {
+  position: absolute;
+  top: -10px;
+  left: 35px;
+  font-size: 15px;
+}
+
+.card-services {
+  position: absolute;
+  padding-left: 100px;
+  margin-top: 10px;
+}
+
+.card-services li {
+  font-size: 24px;
+  padding: 8px;
+  list-style-type: none;
+}
+
+.card-user {
+  position: absolute;
+  right: 65px;
+  top: 10px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+
+.card-link:hover {
+  opacity: 0.3;
+}
+
+

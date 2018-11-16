@@ -1,29 +1,31 @@
 <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1527512950678-b88a241e9f4b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=468789e920b7440447df653edade6df4&auto=format&fit=crop&w=750&q=80');">
 
-
   <div class="row">
-    <div class="col-md-4">
-      <div class="card-category">
-      </div>
-      <div class="card-description">
-        <h2><%= hairstylist.first_name %></h2>
+    <div class="col-md-4 text-left">
+      <div class="card-name">
+        <div class="hairstylist_name">
+          <h2><%= hairstylist.first_name %></h2>
+        </div>
       </div>
     </div>
 
     <div class="col-md-4 text-center">
-
-      <ul>
-        <% hairstylist.services.first(3).each do |service| %>
-          <li><%= service.name %></li>
-        <% end %>
-      </ul>
+      <div class="card-services">
+        <ul>
+          <% hairstylist.services.first(3).each do |service| %>
+            <li><%= service.name %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
 
     <div class="col-md-4 text-right">
-      <%= image_tag "http://www.divestco.com/wp-content/uploads/2017/06/face-placeholder.gif", class: "img-circle", size: 75 %>
+      <div class="card-user">
+        <%= image_tag "http://www.divestco.com/wp-content/uploads/2017/06/face-placeholder.gif", class: "img-circle", size: 75 %>
+      </div>
     </div>
   </div>
 
-  <a class="card-link" href="<%= hairstylist_path(hairstylist) %>" ></a>
+  <a class="card-link" href="<%= hairstylist_path(hairstylist) %>"></a>
 
 </div>
