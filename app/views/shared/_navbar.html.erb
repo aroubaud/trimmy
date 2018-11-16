@@ -13,7 +13,7 @@
 
         <!-- Links when logged in -->
         <% if current_user.hairstylist? %>
-          <%= link_to "My bookings", services_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+          <%= link_to "My profile", services_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
         <% else %>
           <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
         <% end %>
@@ -32,7 +32,7 @@
 <% else %>
    <div class="navbar-trimmy-color">
     <!-- Logo -->
-    <%= link_to root_path, class: "navbar-trimmy-brand navbar-trimmy-link-color" do %>
+    <%= link_to root_path, class: "navbar-trimmy-brand", id: "logo-text-color" do %>
       <%= image_tag "trimmy_logo.png", height: 50 %>
       Trimmy
     <% end %>
@@ -43,9 +43,9 @@
       <% if user_signed_in? %>
 
        <% if current_user.hairstylist? %>
-          <%= link_to "My bookings", services_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+          <%= link_to "My profile", services_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
         <% else %>
-          <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+          <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
         <% end %>
         <!-- Links when logged in -->
 

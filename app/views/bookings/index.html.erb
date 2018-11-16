@@ -1,6 +1,8 @@
+<div class="wrapperbook">
 <h1>My bookings</h1>
 
 <% current_user.bookings.each do |booking| %>
   <p><%= booking.service.name %> <%= booking.service.price %>$ <%= booking.status %></p>
 <% end %>
+</div>
 
