@@ -64,25 +64,16 @@ service_attributes = [
     price: 20
   },
   {
-    name: 'Shampoo and haircut',
+    name: 'Shampoo',
     description: 'Shampoo and conditioner wash for any type of hair followed by an awesome haircut',
-    price: 50
+    price: 40
   },
   {
     name: 'Coloring',
     description: 'I have a wide variety of colors. You will be able to pick and I will color your hair right at home!',
     price: 120
   }
-  {
-    name: 'Relaxers',
-    description: 'Let us help you have smoother, straighter hair',
-    price: 150
-  }
-  {
-    name: 'Conditioning',
-    description: 'To repair damaged hair',
-    price: 150
-  }
+
 ]
 puts "Services created!"
 
