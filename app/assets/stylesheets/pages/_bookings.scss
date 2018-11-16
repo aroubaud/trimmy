@@ -1,6 +1,14 @@
+.wrapperbooking {
+  background-size: cover;
+  background-image: asset-url("book8.jpeg");
+  height: 100vh;
+  opacity: 0.9;
+  padding-top: 50px;
+}
+
 .bookings-content {
   max-width: 900px;
-  margin: 50px auto;
+  margin-left: 250px;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
   border: 2px solid rgb(200, 200, 200);
   background: rgba(255, 255, 255, 0.9);
