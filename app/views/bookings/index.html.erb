@@ -1,8 +1,21 @@
 <div class="wrapperbook">
-<h1>My bookings</h1>
+  <div id="booktext"><h1>My bookings</h1></div>
+    <table>
+      <thead>
+        <tr>
+          <td><strong>Name</strong></td>
+          <td><strong>Price</strong></td>
+          <td><strong>Status</strong></td>
+        </tr>
+      </thead>
 
-<% current_user.bookings.each do |booking| %>
-  <p><%= booking.service.name %> <%= booking.service.price %>$ <%= booking.status %></p>
-<% end %>
+    <% current_user.bookings.each do |booking| %>
+          <tr>
+        <td><%= booking.service.name %></td>
+        <td><%= booking.service.price %>$</td>
+        <td><%= booking.status %></td>
+      </tr>
+    </table>
+    <% end %>
 </div>
 
