@@ -1,39 +1,14 @@
-// .profile-content {
-//   max-width: 900px;
-//   margin: 50px auto;
-//   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-//   border: 2px solid rgb(200, 200, 200);
-//   background: rgba(255, 255, 255, 0.9);
-//   border-radius: 4px;
-//   padding-top: 30px;
-// }
+.profile-content h2 {
+  margin-bottom: 40px;
+}
 
-// .btn-yours {
-//   margin-left: 5px;
-//   margin-right: 700px;
-//   margin-top: 30px;
-//   padding: 21px 60px;
-// }
-
-
-// .container {
-//   max-width: 900px;
-//   margin: 50px auto;
-//   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-//   border: 2px solid rgb(200, 200, 200);
-//   background: rgba(255, 255, 255, 0.9);
-//   border-radius: 4px;
-//   padding-top: 30px;
-// }
-
-
-// td {
-//   padding-right: 40px;
-//   padding-bottom: 20px;
-// }
-
-#bookings {
-  padding-right: 40px;
+.profile-services {
+  margin: 75px 0px;
+}
+.profile-service {
+  display: flex;
+  padding: 20px 0px;
+  width: 100%;
 }
 
 #user {
@@ -45,23 +20,46 @@
     max-width: 500px;
     margin: auto;
 }
-// h2{
-//   padding-bottom: 20px;
-// }
-
-// a {
-//   color: rgba(161, 161, 161s, 1);
-// }
-
-// a:hover {
-//   text-decoration: none;
-//   color: black;
-// }
-
-.wrapper {
-  background-size: cover;
-  background-image: asset-url("services.jpeg");
-  height: 132vh;
-  opacity: 0.8;
+.profile-service-name {
+  flex-basis: 10%;
 }
 
+.profile-service-description {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+.profile-service-price {
+  flex-basis: 10%;
+}
+
+.profile-service-buttons {
+  flex-basis: 30%;
+}
+
+.profile-bookings {
+  margin-top: 100px;
+}
+
+.profile-booking {
+  display: flex;
+  padding: 20px 0px;
+  width: 100%;
+}
+
+.profile-booking-name {
+  flex-basis: 10%;
+}
+
+.profile-booking-date {
+  flex-basis: 20%;
+}
+
+.profile-booking-status {
+  text-align: center;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.profile-booking-buttons {
+  flex-basis: 30%;
+}

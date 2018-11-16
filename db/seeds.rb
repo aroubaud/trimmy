@@ -5,8 +5,8 @@ User.destroy_all
 puts "Creating users..."
 user_attributes = [
   {
-    first_name: 'Alex',
-    last_name: 'Roub',
+    first_name: 'Alexandre',
+    last_name: 'Roubo',
     email: 'alex@email.com',
     password: '123456',
     hairstylist: false
@@ -20,14 +20,14 @@ user_attributes = [
   },
   {
     first_name: 'Luc',
-    last_name: 'Luko',
+    last_name: 'Antho',
     email: 'luc@email.com',
     password: '123456',
     hairstylist: false
   },
   {
     first_name: 'Vlad',
-    last_name: 'Dislav',
+    last_name: 'Rango',
     email: 'vlad@email.com',
     password: '123456',
     hairstylist: true
@@ -38,19 +38,19 @@ puts "Users created!"
 puts "Creating services..."
 service_attributes = [
   {
-    name: 'Trim',
-    description: 'Beautiful haircut for men',
+    name: 'Haircut',
+    description: 'Beautiful haircut for men, women or children. I can cut any type of hair and style to your desire!',
     price: 20
   },
   {
-    name: 'Shampoo',
-    description: 'Shampoo and conditioner wash for any type of hair',
-    price: 40
+    name: 'Shampoo and haircut',
+    description: 'Shampoo and conditioner wash for any type of hair followed by an awesome haircut',
+    price: 50
   },
   {
     name: 'Coloring',
-    description: 'Any color for you to color your hair',
-    price: 80
+    description: 'I have a wide variety of colors. You will be able to pick and I will color your hair right at home!',
+    price: 120
   }
 ]
 puts "Services created!"
