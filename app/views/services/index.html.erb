@@ -1,43 +1,55 @@
-<div class="wrapper">
-  <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+<div class="profile-content">
   <div class="container">
-    <div class="card2">
-     <h1>My services</h1>
-        <table>
-          <thead>
-              <td><strong>Name</strong></td>
-              <td><strong>Description</strong></td>
-              <td><strong>Price/CAD</strong></td>
-              <td><strong>Edit</strong></td>
-              <td><strong>Destroy</strong></td>
-            </tr>
-          </thead>
-          <tbody>
-            <% @services.each do |service| %>
-            <tr>
-              <td><strong><%= service.name %></strong></td>
-              <td><%= service.description %></td>
-              <td><strong><%= service.price %></strong></td>
-              <td id="link"><%= link_to 'edit', edit_service_path(service) %></td>
-              <td id="link"><%= link_to 'destroy', service_path(service), method: :delete %></td>
-            </tr>
+    <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+
+    <div class="profile-services">
+      <h2>My services</h1>
+        <% @services.each do |service| %>
+          <div class="profile-service">
+            <div class="profile-service-name">
+              <strong><%= service.name %></strong>
+            </div>
+            <div class="profile-service-description">
+              <%= service.description %>
+            </div>
+            <div class="profile-service-price">
+              <strong><%= service.price %>$</strong>
+            </div>
+            <div class="profile-service-buttons">
+              <%= link_to 'edit', edit_service_path(service), class: "btn-yours" %>
+              <%= link_to 'delete', service_path(service), method: :delete, class: "btn-yours" %>
+            </div>
+          </div>
+        <% end %>
+    </div>
+    <%= link_to 'Add a service', new_service_path, class: "btn-yours" %>
+
+    <div class="profile-bookings">
+      <h2>My bookings</h1>
+      <% @bookings.each do |booking| %>
+        <div class="profile-booking">
+          <div class="profile-booking-name">
+            <strong><%= booking.user.first_name %></strong>
+            <strong><%= booking.user.last_name %></strong>
+          </div>
+          <div class="profile-booking-date">
+            <%= booking.date%>
+          </div>
+          <div class="profile-booking-status">
+            <%= booking.status%>
+          </div>
+          <div class="profile-booking-buttons">
+            <% if booking.status == "Pending" %>
+              <%= link_to 'Accept', booking_path(booking, status: "Accepted"), method: :patch, class: "btn-yours" %>
+              <%= link_to 'Decline', booking_path(booking, status: "Declined"), method: :patch, class: "btn-yours" %>
+            <% elsif booking.status == "Accepted" %>
+              <%= link_to 'Cancel', booking_path(booking, status: "Declined"), method: :patch, class: "btn-yours" %>
             <% end %>
-          </tbody>
-        </table>
-        <p class="btn-yours" id="link"><%= link_to 'Add a service', new_service_path %></p>
-      </div>
-      <div class="card2">
-        <h1>My bookings</h1>
-        <% @bookings.each do |booking| %>
-          <p>
-            <strong id="user"><%= booking.user.first_name %></strong>
-            <span id="user"> <%= booking.date%></span>
-            <span id="user"><%= booking.status%></span>
-            <span id="user"><%= link_to 'Accept', booking_path(booking, status: "accepted"), method: :patch %></span>
-            <span id="user"><%= link_to 'Decline', booking_path(booking, status: "declined"), method: :patch %></span>
-          </p>
-          <% end %>
-      </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
   </div>
 </div>
 
