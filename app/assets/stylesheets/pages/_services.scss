@@ -5,13 +5,21 @@
 .profile-services {
   margin: 75px 0px;
 }
-
 .profile-service {
   display: flex;
   padding: 20px 0px;
   width: 100%;
 }
 
+#user {
+  padding-right: 20px;
+  padding-left: 50px;
+}
+
+.text-center{
+    max-width: 500px;
+    margin: auto;
+}
 .profile-service-name {
   flex-basis: 10%;
 }
@@ -20,7 +28,6 @@
   flex-grow: 1;
   flex-basis: auto;
 }
-
 .profile-service-price {
   flex-basis: 10%;
 }
