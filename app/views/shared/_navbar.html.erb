@@ -9,10 +9,14 @@
     <!-- Right Navigation -->
     <div class="navbar-trimmy-right">
 
-      <% if user_signed_in?%>
+      <% if user_signed_in? %>
 
         <!-- Links when logged in -->
-        <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+        <% if current_user.hairstylist? %>
+          <%= link_to "My bookings", services_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+        <% else %>
+          <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+        <% end %>
         <%= link_to destroy_user_session_path, method: :delete, class: "navbar-trimmy-item navbar-trimmy-link" do %>
         Log out
         <% end %>
@@ -23,6 +27,8 @@
       <% end %>
     </div>
   </div>
+
+
 <% else %>
    <div class="navbar-trimmy-color">
     <!-- Logo -->
@@ -34,8 +40,13 @@
     <!-- Right Navigation -->
     <div class="navbar-trimmy-right">
 
-      <% if user_signed_in? && current_user.hairstylist = true %>
-        <%= link_to "My bookings", services_path, class: "navbar-trimmy-item navbar-trimmy-link-color" %>
+      <% if user_signed_in? %>
+
+       <% if current_user.hairstylist? %>
+          <%= link_to "My bookings", services_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+        <% else %>
+          <%= link_to "My bookings", bookings_path, class: "navbar-trimmy-item navbar-trimmy-link" %>
+        <% end %>
         <!-- Links when logged in -->
 
         <%= link_to destroy_user_session_path, method: :delete, class: "navbar-trimmy-item navbar-trimmy-link-color" do %>
